@@ -8,10 +8,18 @@ public class TestaFuncionario {
     System.out.println(kaue.getSalario());
 
     Gerente jair = new Gerente("Jair", "012366423", 3120);
+    jair.setSenha(2222);
+    boolean autenticado = jair.autentica(22212);
+
+    if(autenticado == true){
+        System.out.println(autenticado);
+        System.out.println(jair.getName());
+        System.out.println(jair.getCpf());
+        System.out.println(jair.getSalario());
+    }else{
+        System.out.println("Não autenticado");
+    }
     
-    System.out.println(jair.getName());
-    System.out.println(jair.getCpf());
-    System.out.println(jair.getSalario());
 
     }
 }
